@@ -1,0 +1,3 @@
+npm install rxjs
+npm install angular-in-memory-web-api --save
+npm install --save tslib
