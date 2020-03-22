@@ -19,7 +19,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             .pipe(
                 mergeMap(() => {
                     // authenticate - public
-                if (request.url.endsWith('/users/authenticate') && request.method === 'POST' ) {
+                if (request.url.endsWith('/api/authenticate') && request.method === 'POST' ) {
                     const user = users.find(x => x.username === request.body.username && x.password === request.body.password);
                     if (!user) return error('Username or password is incorect');
     
